@@ -19,10 +19,16 @@
   
   /* Шапка */
   .header {
-    background-color: #fdfdfd;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: fixed;    /* фиксируем относительно окна */
+    top: 0;             /* у самого верха */
+    left: 0;
+    width: 100%;        /* на всю ширину экрана */
+    background-color: #faeded; /* твой базовый цвет */
+    z-index: 1000;      /* над всеми остальными слоями */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
   }
+  
 
   
   .header__inner {
@@ -509,4 +515,73 @@
   border: none;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+/* Offers / Акции */
+.offers {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.offers__title {
+  text-align: center;
+  font-size: 2rem;
+  color: #259da8;
+  margin-bottom: 40px;
+}
+
+.offers__grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Карточка акции */
+.offer-card {
+  position: relative;
+  width: calc(50% - 10px);
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Постоянный оверлей снизу */
+.offer-card__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+.offer-card__overlay span {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Hover-эффект */
+.offer-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Адаптив */
+@media (max-width: 767px) {
+  .offer-card {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
 }

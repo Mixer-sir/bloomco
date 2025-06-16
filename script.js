@@ -36,3 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    emailjs.sendForm('service_uzowraa', 'template_5jlex1n', this)
+      .then(function() {
+        alert('Спасибо! Ваша заявка отправлена.');
+        document.getElementById('contact-form').reset();
+      }, function(error) {
+        alert('Ошибка при отправке, попробуйте ещё раз.');
+        console.error('EmailJS Error:', error);
+      });
+  });
+// Инициализация EmailJS  

@@ -120,6 +120,25 @@
     </div>
   </section>
   
+  <section class="offers" id="offers">
+    <div class="container">
+      <h2 class="offers__title">Акции и спецпредложения</h2>
+      <div class="offers__grid">
+        <a href="#contact" class="offer-card" style="background-image: url('assets/images/offer-bd.jpg')">
+          <div class="offer-card__overlay">
+            <span>Скидка 20% к вашему дню рождения!</span>
+          </div>
+        </a>
+        <a href="#contact" class="offer-card" style="background-image: url('assets/images/offer-8march.jpg')">
+          <div class="offer-card__overlay">
+            <span>Спецпредложение к 8 Марта!</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+
   <section class="promo">
     <div class="container promo__inner">
       <p class="promo__text">
@@ -134,13 +153,13 @@
     <div class="container contact__inner">
       <h2 class="contact__title">Закажи сейчас — получи уже завтра</h2>
       <p class="contact__subtitle">Укажите контактные данные, а остальное оставьте нам.</p>
-      <form class="contact__form">
-        <input type="text" name="name" placeholder="Ваше имя" required />
-        <input type="tel" name="phone" placeholder="Телефон" required />
-        <input type="text" name="adres" placeholder="Адрес" required />
-        <textarea name="message" placeholder="Ваши пожелания (необязательно)"></textarea>
+      <form id="contact-form" class="contact__form">
+        <input type="text" name="from_name" placeholder="Ваше имя" required />
+        <input type="tel"  name="from_phone" placeholder="Телефон" required />
+        <input type="text" name="adres"      placeholder="Адрес"  required />
+        <textarea    name="message"         placeholder="Ваши пожелания (необязательно)"></textarea>
         <button type="submit">Отправить заявку</button>
-      </form>
+      </form>      
     </div>
   </section>
 
@@ -188,7 +207,16 @@
     </div>
   </div>
 
-  
+    <!-- EmailJS SDK -->
+  <script type="text/javascript"
+  src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js">
+  </script>
+  <script type="text/javascript">
+  (function(){
+    emailjs.init('NXz5oB1UrZuLegO3w'); // замените на ваш user_xxx
+  })();
+  </script>
+
 
   <script src="script.js"></script>
 </body>
