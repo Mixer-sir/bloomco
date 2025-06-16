@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #ecc8c9;
+  }
+  
+  /* Контейнер */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Шапка */
+  .header {
+    background-color: #fdfdfd;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e48826;
+  }
+  
+  .nav__list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav__list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .nav__list a:hover {
+    color: #259da8;
+  }
+  
+  /* Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('assets/images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(9, 47, 51, 0.8), rgba(8, 29, 31, 0.7));
+    z-index: 1;
+  }
+  
+  .hero__content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero__title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #e48826;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero__btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #259da8;
+    border-radius: 7px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .hero__btn:hover {
+    background-color: #259da8;
+    color: #fff;
+  }
+
+  .hero__content {
+    animation: fadein 1s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadein {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* About */
+.about {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .about__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .about__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 400px;
+  }
+  
+  .about__content {
+    flex: 1 1 400px;
+  }
+  
+  .about__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #e48826;
+  }
+  
+  .about__subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #777;
+  }
+  
+  .about__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* Products */
+.products {
+    padding: 100px 0;
+    background-color: #ecc8c9;
+    text-align: center;
+  }
+  
+  .products__title {
+    font-size: 2rem;
+    color: #e48826;
+    margin-bottom: 50px;
+  }
+  
+  .products__grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    max-width: 240px;
+    max-height: 240px;
+    object-fit: cover;
+  }
+  
+  .product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .product-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .product-card .price {
+    font-weight: bold;
+    color: #259da8;
+    font-size: 1.1rem;
+  }
+
+  /* Promo */
+.promo {
+    background-color: #c6a78f;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .promo__text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .promo__btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #259da8;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .promo__btn:hover {
+    background-color: #726053;
+    color: #fff;
+  }
+
+  /* Contact */
+.contact {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .contact__title {
+    font-size: 2rem;
+    color: #e48826;
+    margin-bottom: 10px;
+  }
+  
+  .contact__subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .contact__form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+  }
+  
+  .contact__form input,
+  .contact__form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+  }
+  
+  .contact__form button {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #259da8;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .contact__form button:hover {
+    background-color: #1d7780;
+  }
+  
+  /* Info */
+.info {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+  }
+  
+  .info__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+  .info__contacts,
+  .info__socials {
+    flex: 1 1 300px;
+  }
+  
+  .info__contacts h3,
+  .info__socials h3 {
+    font-size: 1.4rem;
+    color: #e48826;
+    margin-bottom: 15px;
+  }
+  
+  .info__contacts p {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #259da8;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #ecc8c9;
+  }
+  
+  /* Footer */
+.footer {
+    background-color: #ecc8c9;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  
+
+  /* ---------------- ADAPTIVE ---------------- */
+
+/* Для планшетов */
+@media (max-width: 1023px) {
+  .about__inner,
+  .info__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-card {
+    width: 45%;
+  }
+}
+
+/* Для мобилок */
+@media (max-width: 767px) {
+  .header__inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .products__grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .contact__form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .info__inner {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+
+/* Модалка с вау-эффектом */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal__content {
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: scale(0.8);
+  opacity: 0;
+  animation: modalShow 0.4s ease-out forwards;
+}
+
+@keyframes modalShow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotateX(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.modal__close:hover {
+  color: #259da8;
+  transform: scale(1.2) rotate(90deg);
+}
+
+.modal__price {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #259da8;
+}
+
+#modal-title {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+#modal-desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
