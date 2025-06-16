@@ -137,6 +137,7 @@
       <form class="contact__form">
         <input type="text" name="name" placeholder="Ваше имя" required />
         <input type="tel" name="phone" placeholder="Телефон" required />
+        <input type="text" name="adres" placeholder="Адрес" required />
         <textarea name="message" placeholder="Ваши пожелания (необязательно)"></textarea>
         <button type="submit">Отправить заявку</button>
       </form>
@@ -161,13 +162,23 @@
       </div>
     </div>
   </section>
+    
+  <section class="map">
+    <div class="container">
+      <h2 class="map__title">Найдите нас на карте</h2>
+      <div class="map__wrapper">
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.com/maps/10309/bishkek/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Бишкек</a><a href="https://yandex.com/maps/10309/bishkek/house/Y00Ycw5pTUIOQFpofXR2c3pmbQ==/?ll=74.599479%2C42.872660&utm_medium=mapframe&utm_source=maps&z=17.14" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск мест</a><iframe src="https://yandex.com/map-widget/v1/?ll=74.599479%2C42.872660&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo2MTY5NzA0NjkwEkbQmtGL0YDQs9GL0LfRgdGC0LDQvSwg0JHQuNGI0LrQtdC6LCDQotC-0LrRgtC-0LPRg9C7INC606nRh9Op0YHSrywgMTIzIgoN7zKVQhWafStC&z=17.14" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+      </div>
+    </div>
+  </section>
+  
 
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Bloom&Co. Все права защищены.</p>
     </div>
   </footer>
-  
+
   <div class="modal" id="modal">
     <div class="modal__content">
       <span class="modal__close" id="modal-close">&times;</span>
@@ -176,7 +187,9 @@
       <p class="modal__price">Цена: <span id="modal-price"></span> сом</p>
     </div>
   </div>
+
   
+
   <script src="script.js"></script>
 </body>
 </html>
