@@ -489,3 +489,24 @@
   color: #444;
   line-height: 1.5;
 }
+
+
+.map {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.map__title {
+  font-size: 1.8rem;
+  color: #259da8;
+  margin-bottom: 30px;
+}
+
+.map__wrapper iframe {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
